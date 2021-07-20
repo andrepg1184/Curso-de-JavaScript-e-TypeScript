@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Modelo</title>
+  <title>Calcule seu IMC</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -28,13 +28,14 @@
    Obesidade grau 3 <br>
    <p><h1>Calcule seu IMC</h1></p>
 
-   <form action="" class="Calcular" method="get">
+   <form action="" id="form" method="POST">
      <strong>Peso:</strong>
      <input type="text" class="peso">
      <strong>Altura:</strong>
      <input type="text" class="altura">
-     <button>Calcular</button>
+     <button id="submit">Calcular</button>
    </form>
+   <div class="resultado"></div>
   </section>
 
   <script src="./assets/js/main.js"></script>
