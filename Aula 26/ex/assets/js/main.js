@@ -1,3 +1,5 @@
+const form = document.querySelector('#form')
+
 
 form.addEventListener('submit', function (evento){
     evento.preventDefault();
@@ -22,9 +24,8 @@ form.addEventListener('submit', function (evento){
 
     const msg = `Seu IMC é ${imc} (${nivelIMC}).`;
 
-    Resultado
+    Resultado(msg, true);
 
-    console.log(imc);
 });
 
 function getNivelIMC(imc){
@@ -56,6 +57,13 @@ function Resultado (msg, isValid){
     resultado.innerHTML = '';
     
     const p = criaP();
+
+    if(isValid){
+        p.classList.add('paragrafo-resultado');
+    }else{
+        p.classList.add('bad');
+    }
+
     p.innerHTML = (msg);
     resultado.appendChild(p);
 }
